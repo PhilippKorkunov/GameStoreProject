@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.button{
+  width: 180px;
+  height: 40px;
+  background: $links-color;
+  font-size: 1.1em;
+  font-weight: normal;
+  padding: 5px;
+  border-radius: 1px;
+  color: black;
+  transition: background .5s, color .5s;
+  cursor: pointer;
+  &:hover{
+    background: white;
+    color: #858585;
+  }
+}

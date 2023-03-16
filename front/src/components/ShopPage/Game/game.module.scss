@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+
+.item{
+  &_title{
+    font-size: 1.1em;
+    padding: 4px;
+    color: $second-color;
+    background: $first-color;
+    word-wrap: break-word;
+    max-width: 196px;
+  }
+  &_info{
+    border: 2px solid black;
+  }
+  &_platform{
+    padding: 4px;
+    background: $first-color;
+    color: $second-color;
+  }
+  &_price{
+    background: $first-color;
+    color: $second-color;
+    padding: 4px;
+  }
+  &_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color .4s, color .4s;
+    &:hover{
+      background-color: $first-color;
+      color: $links-color;
+    }
+  }
+}
+
+.hide{
+  visibility: hidden;
+}
+
+.alert{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+  font-weight: bold;
+  color: $links-color;
+}

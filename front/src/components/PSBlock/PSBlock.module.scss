@@ -1,0 +1,59 @@
+@import "../../styles/variables";
+
+.photo_block{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 80px;
+  border-bottom: 5px solid $links-color;
+
+  &__left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    font-size: 1.7em;
+  }
+
+  &__right{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
+    text-align: right;
+  }
+}
+
+@media (max-width: $md) {
+  .photo_block{
+    &__left{
+     margin-left: 30px;
+      font-size: 1.4em;
+    }
+
+    &__right{
+      margin-right: 30px;
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .photo_block{
+    flex-direction: column;
+    &__left{
+      text-align: center;
+      margin-left: 0;
+    }
+
+    &__right{
+      text-align: center;
+      margin-right: 0;
+    }
+    &__center{
+      margin-bottom: 20px;
+    }
+  }
+}

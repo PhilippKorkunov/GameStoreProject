@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+
+.wrapper{
+  border-top: 2px solid $first-color;
+  padding: 50px 50px;
+  min-height: 50vh;
+  background-color: #ffffff;
+}
+
+.row{
+  color: $links-color;
+  font-weight: bold;
+}

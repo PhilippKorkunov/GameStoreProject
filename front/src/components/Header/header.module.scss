@@ -1,0 +1,123 @@
+@import "../../styles/variables";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.header {
+  height: 130px;
+  width: 100%;
+}
+
+.mobile_menu {
+  display: none;
+}
+
+.top {
+  background-color: $first-color;
+  height: 40px;
+}
+
+.bottom {
+  background-color: $second-color;
+  height: 110px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.9em;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  color: $first-color;
+
+  &__start {
+    color: $links-color;
+  }
+
+  &:hover {
+    color: $links-color;
+
+    .title__start {
+      color: $first-color;
+    }
+  }
+}
+
+.menu {
+  &__items {
+    display: flex;
+
+    &_item {
+      margin-right: 50px;
+      font-size: 1.4em;
+      color: black;
+      cursor: pointer;
+
+      a {
+        color: black;
+
+        &:active, &:hover {
+          color: $links-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .title {
+    font-size: 1.5em;
+  }
+
+  .menu {
+    &__items {
+      &_item {
+        margin-right: 20px;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+@media (max-width: $xs) {
+  .header_title {
+    display: block;
+  }
+  .bottom {
+    justify-content: space-around;
+  }
+  .menu {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.2em;
+  }
+  .mobile_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+
+    &__items {
+      &_item {
+        color: black;
+        cursor: pointer;
+        font-size: 16px;
+        a {
+          color: black;
+
+          &:active, &:hover {
+            color: $links-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .mobile_menu__items {
+    &_item {
+      font-size: 12px;
+    }
+  }
+}

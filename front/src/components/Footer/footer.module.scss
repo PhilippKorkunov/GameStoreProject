@@ -1,0 +1,98 @@
+@import "../../styles/variables";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.footer{
+  display: grid;
+  height: 350px;
+  grid-template-rows: 4fr 1fr;
+  padding: 40px 0 0;
+  background: black;
+}
+
+.footer_top{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  &__left{
+
+  }
+
+  &__right{
+    .list{
+      .item{
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        cursor: pointer;
+        a{
+          color: $grey-color;
+          &:hover{
+            color: $links-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.title{
+  font-size: 2em;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  &__start{
+    color: $links-color;
+  }
+  &:hover{
+    color: $links-color;
+    .title__start{
+      color: white;
+    }
+  }
+}
+
+.footer_bottom{
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: 25px solid black;
+}
+
+.copyright{
+  font-size: 1.2em;
+}
+
+.links{
+  margin-left: 90px;
+  &_item{
+    color: black;
+    width: 30px;
+    font-size: 1.2em;
+    height: 25px;
+    margin-left: 10px;
+    transition: color .6s;
+    &:hover{
+      color: #3572ea;
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .title{
+    font-size: 1.4em;
+  }
+  .item{
+    font-size: 1.2em;
+  }
+  .footer_top{
+    &__right{
+      .list{
+        .item{
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
